@@ -9,8 +9,9 @@ namespace Task1.StepDefinations
     public class HomepageWithLogin_TestcasesSteps
     {
         IWebDriver driver = new ChromeDriver();
-        [Given(@"User have open homepage of the respective website")]
-        public void GivenUserHaveOpenHomepageOfTheRespectiveWebsite()
+
+        [Given(@"User is in home page and want to login")]
+        public void GivenUserIsInHomePageAndWantToLogin()
         {
             driver.Navigate().GoToUrl("http://192.168.99.100:5000/");
 
@@ -22,20 +23,8 @@ namespace Task1.StepDefinations
             driver.FindElement(By.XPath("//button[@class='fluid ui teal button']")).Click();
         }
         
-        [Given(@"click on Sigin link on the right side of the homepage on the top")]
-        public void GivenClickOnSiginLinkOnTheRightSideOfTheHomepageOnTheTop()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"New user want to create account in respective website")]
-        public void GivenNewUserWantToCreateAccountInRespectiveWebsite()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"click on joiin link on the right side of the homepage on the top")]
-        public void GivenClickOnJoiinLinkOnTheRightSideOfTheHomepageOnTheTop()
+        [Given(@"User is in home page and  want to create account")]
+        public void GivenUserIsInHomePageAndWantToCreateAccount()
         {
             ScenarioContext.Current.Pending();
         }
@@ -52,20 +41,8 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user enter First name, Last name, email, password and confirm password")]
-        public void WhenUserEnterFirstNameLastNameEmailPasswordAndConfirmPassword()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on to agree terms and conditions, click join")]
-        public void WhenClickOnToAgreeTermsAndConditionsClickJoin()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"it will be navigated to Signin module")]
-        public void ThenItWillBeNavigatedToSigninModule()
+        [When(@"click on joiin , user enter First name, Last name, email, password and confirm password")]
+        public void WhenClickOnJoiinUserEnterFirstNameLastNameEmailPasswordAndConfirmPassword()
         {
             ScenarioContext.Current.Pending();
         }
@@ -78,12 +55,6 @@ namespace Task1.StepDefinations
         
         [Then(@"user will be unsuccessfully Logged into the website and appropriate error message will be displayed")]
         public void ThenUserWillBeUnsuccessfullyLoggedIntoTheWebsiteAndAppropriateErrorMessageWillBeDisplayed()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"it will be navigated to Joinin module")]
-        public void ThenItWillBeNavigatedToJoininModule()
         {
             ScenarioContext.Current.Pending();
         }

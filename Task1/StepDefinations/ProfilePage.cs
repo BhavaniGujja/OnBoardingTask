@@ -7,17 +7,18 @@ using TechTalk.SpecFlow;
 namespace Task1.StepDefinations
 {
     [Binding]
-    public class InProfileFunctionalityUserWillUpdateAllTheEducationsDetailsLanguageSkillsOtherSkillsCertificationAndDetailsToDescribeAboutAPersonToBuyersToKnowAboutTheUser_Steps
+    public class UnknownSteps
     {
         IWebDriver driver = new ChromeDriver();
-        [Given(@"User want to describe about himself in text")]
-        public void GivenUserWantToDescribeAboutHimselfInText()
+
+        [Given(@"User is in profile page and want to add description")]
+        public void GivenUserIsInProfilePageAndWantToAddDescription()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"User want to click on Languages")]
-        public void GivenUserWantToClickOnLanguages()
+        [Given(@"User is in profile page and want to click on Languages")]
+        public void GivenUserIsInProfilePageAndWantToClickOnLanguages()
         {
             System.Threading.Thread.Sleep(5000);
             driver.FindElement(By.XPath("//a[contains(.,'Languages')]")).Click(); //To click on Languages icon
@@ -25,14 +26,8 @@ namespace Task1.StepDefinations
             driver.FindElement(By.XPath("(//div[contains(@class,'ui teal button ')])[1]")).Click(); //To click on add new in Languages
         }
         
-        [Given(@"can able to add how many languages do user speaks needs to be entered")]
-        public void GivenCanAbleToAddHowManyLanguagesDoUserSpeaksNeedsToBeEntered()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on add new button in languages to add details about the languages")]
-        public void GivenUserClickOnAddNewButtonInLanguagesToAddDetailsAboutTheLanguages()
+        [Given(@"User is in profile page and want to add languages and details")]
+        public void GivenUserIsInProfilePageAndWantToAddLanguagesAndDetails()
         {
             driver.FindElement(By.XPath("//input[@name='name']")).SendKeys("English"); //To enter language name
             SelectElement english = new SelectElement(driver.FindElement(By.XPath("//select[@name='level']"))); //To select the level of language
@@ -52,35 +47,16 @@ namespace Task1.StepDefinations
             SelectElement telugu = new SelectElement(driver.FindElement(By.XPath("//select[@name='level']"))); //To select the level of language
             telugu.SelectByText("Fluent");
             driver.FindElement(By.XPath("//input[@value='Add']")).Click(); //To save the details entered about language of Telugu
-
         }
-
-        [Given(@"it is navigated to dialogue box")]
-        public void GivenItIsNavigatedToDialogueBox()
+        
+        [Given(@"User is in profile page and want delete the languages saved")]
+        public void GivenUserIsInProfilePageAndWantDeleteTheLanguagesSaved()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"displays name of the language, level of the language should be entered")]
-        public void GivenDisplaysNameOfTheLanguageLevelOfTheLanguageShouldBeEntered()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on languages icon to perform delete action")]
-        public void GivenUserClickOnLanguagesIconToPerformDeleteAction()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"it is displayed with list of languages user saved")]
-        public void GivenItIsDisplayedWithListOfLanguagesUserSaved()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User want to click on Skills")]
-        public void GivenUserWantToClickOnSkills()
+        [Given(@"User is in profile page and want to click on skills")]
+        public void GivenUserIsInProfilePageAndWantToClickOnSkills()
         {
             driver.FindElement(By.XPath("//a[contains(@data-tab,'second')]")).Click(); // To click on skills icon
             System.Threading.Thread.Sleep(3000);
@@ -89,14 +65,8 @@ namespace Task1.StepDefinations
 
         }
 
-        [Given(@"can able add how many skills do user speaks gained from his previous experience and hobbies")]
-        public void GivenCanAbleAddHowManySkillsDoUserSpeaksGainedFromHisPreviousExperienceAndHobbies()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on add new button in skills icon to add number of skills")]
-        public void GivenUserClickOnAddNewButtonInSkillsIconToAddNumberOfSkills()
+        [Given(@"User is in profile page and want to add new number of skills")]
+        public void GivenUserIsInProfilePageAndWantToAddNewNumberOfSkills()
         {
             driver.FindElement(By.XPath("//input[contains(@placeholder,'Add Skill')]")).SendKeys("Higher Typing"); //To click on name of the skills box and enter the skill name
 
@@ -117,26 +87,14 @@ namespace Task1.StepDefinations
             driver.FindElement(By.XPath("(//input[contains(@class,'ui teal button ')])[1]")).Click(); //To save the skills details to add
         }
         
-        [Given(@"displays name of the skill, level of the skill should be entered")]
-        public void GivenDisplaysNameOfTheSkillLevelOfTheSkillShouldBeEntered()
+        [Given(@"User is in profile page and want to delete saved skills")]
+        public void GivenUserIsInProfilePageAndWantToDeleteSavedSkills()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"User click on skills icon to perform delete action")]
-        public void GivenUserClickOnSkillsIconToPerformDeleteAction()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"it is displayed with list of skills user saved")]
-        public void GivenItIsDisplayedWithListOfSkillsUserSaved()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User want to click on Education icon")]
-        public void GivenUserWantToClickOnEducationIcon()
+        [Given(@"User is in profile page and want to click on Education icon")]
+        public void GivenUserIsInProfilePageAndWantToClickOnEducationIcon()
         {
             System.Threading.Thread.Sleep(1000);
             driver.FindElement(By.XPath("//a[@data-tab='third']")).Click(); // To click on education icon
@@ -145,14 +103,8 @@ namespace Task1.StepDefinations
 
         }
 
-        [Given(@"can able to add how many education qualification user have with respect to his background")]
-        public void GivenCanAbleToAddHowManyEducationQualificationUserHaveWithRespectToHisBackground()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on Add new button in Education icon to add number of qualifications")]
-        public void GivenUserClickOnAddNewButtonInEducationIconToAddNumberOfQualifications()
+        [Given(@"User is in profile page and want click to add number of Education qualifications")]
+        public void GivenUserIsInProfilePageAndWantClickToAddNumberOfEducationQualifications()
         {
             driver.FindElement(By.XPath("//input[@name='instituteName']")).SendKeys("La Trobe University"); //To enter university Name
 
@@ -178,6 +130,7 @@ namespace Task1.StepDefinations
             driver.FindElement(By.XPath("//input[contains(@name,'instituteName')]")).Clear(); //To clear the text box of university name
             System.Threading.Thread.Sleep(5000);
             driver.FindElement(By.XPath("//input[@name='instituteName']")).SendKeys("JNTU University"); //To enter university Name
+
             SelectElement selectElement3 = new SelectElement(driver.FindElement(By.XPath("//select[@name='country']"))); //To select the name of the country
             SelectElement countryname1 = selectElement3;
             countryname1.SelectByText("India");
@@ -194,76 +147,37 @@ namespace Task1.StepDefinations
             year1.SelectByText("2015");
 
             driver.FindElement(By.XPath("//input[contains(@class,'ui teal button ')]")).Click(); // To click add button
+
+
+
         }
-        
-        [Given(@"displays Name of the University, Country, Title, Name of degree, Year of passing should be entered")]
-        public void GivenDisplaysNameOfTheUniversityCountryTitleNameOfDegreeYearOfPassingShouldBeEntered()
+
+        [Given(@"User is in profile page and want to delete education details")]
+        public void GivenUserIsInProfilePageAndWantToDeleteEducationDetails()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"User click on Education icon to perform delete action")]
-        public void GivenUserClickOnEducationIconToPerformDeleteAction()
+        [Given(@"User is in profile page and  want to click on Certification icon")]
+        public void GivenUserIsInProfilePageAndWantToClickOnCertificationIcon()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"it is displayed with list of education details user saved")]
-        public void GivenItIsDisplayedWithListOfEducationDetailsUserSaved()
+        [Given(@"User is in profile page and want to click to add number of certifications")]
+        public void GivenUserIsInProfilePageAndWantToClickToAddNumberOfCertifications()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"User want to click on Certification icon")]
-        public void GivenUserWantToClickOnCertificationIcon()
+        [Given(@"User is in profile page and want to delete saved certification details")]
+        public void GivenUserIsInProfilePageAndWantToDeleteSavedCertificationDetails()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [Given(@"can able to add how many certification user have with respect to his background")]
-        public void GivenCanAbleToAddHowManyCertificationUserHaveWithRespectToHisBackground()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on Add new button in Certification icon to add number of certification")]
-        public void GivenUserClickOnAddNewButtonInCertificationIconToAddNumberOfCertification()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"displays Name of the Certification,Name of the company certified, Year should be enterd")]
-        public void GivenDisplaysNameOfTheCertificationNameOfTheCompanyCertifiedYearShouldBeEnterd()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"User click on Certification icon to perform delete action")]
-        public void GivenUserClickOnCertificationIconToPerformDeleteAction()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Given(@"it is displayed with list of Certification details user saved")]
-        public void GivenItIsDisplayedWithListOfCertificationDetailsUserSaved()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"user click on edit to describe in words")]
-        public void WhenUserClickOnEditToDescribeInWords()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"he is allowed to write (.*) characters word limit")]
-        public void WhenHeIsAllowedToWriteCharactersWordLimit(int p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on save button")]
-        public void WhenClickOnSaveButton()
+        [When(@"user click on edit to describe in words allowed to write (.*) characters word limit")]
+        public void WhenUserClickOnEditToDescribeInWordsAllowedToWriteCharactersWordLimit(int p0)
         {
             ScenarioContext.Current.Pending();
         }
@@ -274,20 +188,14 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user enter the name and level of language")]
-        public void WhenUserEnterTheNameAndLevelOfLanguage()
+        [When(@"user click on add new, enter the name and level of language")]
+        public void WhenUserClickOnAddNewEnterTheNameAndLevelOfLanguage()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user select the which language should be deleted")]
-        public void WhenUserSelectTheWhichLanguageShouldBeDeleted()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on close button to delete")]
-        public void WhenClickOnCloseButtonToDelete()
+        [When(@"user select the which language should be deleted, click on close button to delete")]
+        public void WhenUserSelectTheWhichLanguageShouldBeDeletedClickOnCloseButtonToDelete()
         {
             ScenarioContext.Current.Pending();
         }
@@ -298,20 +206,14 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user enter the name and level of skill")]
-        public void WhenUserEnterTheNameAndLevelOfSkill()
+        [When(@"user click on Add new, enter the name and level of skill")]
+        public void WhenUserClickOnAddNewEnterTheNameAndLevelOfSkill()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user select the which skill should deleted")]
-        public void WhenUserSelectTheWhichSkillShouldDeleted()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on close button to delete in skills")]
-        public void WhenClickOnCloseButtonToDeleteInSkills()
+        [When(@"user select the which skill should deleted, click on close button to delete in skills")]
+        public void WhenUserSelectTheWhichSkillShouldDeletedClickOnCloseButtonToDeleteInSkills()
         {
             ScenarioContext.Current.Pending();
         }
@@ -322,20 +224,14 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user enter the all the details mentioned")]
-        public void WhenUserEnterTheAllTheDetailsMentioned()
+        [When(@"user click on Add new, enter the all the details mentioned")]
+        public void WhenUserClickOnAddNewEnterTheAllTheDetailsMentioned()
         {
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user select the which education should deleted")]
-        public void WhenUserSelectTheWhichEducationShouldDeleted()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on close button to delete in education")]
-        public void WhenClickOnCloseButtonToDeleteInEducation()
+        [When(@"user select the which education should deleted, click on close button to delete in education")]
+        public void WhenUserSelectTheWhichEducationShouldDeletedClickOnCloseButtonToDeleteInEducation()
         {
             ScenarioContext.Current.Pending();
         }
@@ -346,14 +242,8 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [When(@"user select the which certification should deleted")]
-        public void WhenUserSelectTheWhichCertificationShouldDeleted()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"click on close button to delete in certification")]
-        public void WhenClickOnCloseButtonToDeleteInCertification()
+        [When(@"user select the which certification should deleted, click on close button to delete in certification")]
+        public void WhenUserSelectTheWhichCertificationShouldDeletedClickOnCloseButtonToDeleteInCertification()
         {
             ScenarioContext.Current.Pending();
         }
@@ -388,7 +278,7 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"click on add button for successful saving of skill details\.")]
+        [Then(@"click on Add button for successful saving of skill details\.")]
         public void ThenClickOnAddButtonForSuccessfulSavingOfSkillDetails_()
         {
             ScenarioContext.Current.Pending();
@@ -406,7 +296,7 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"click on add button for successful saving of Education details\.")]
+        [Then(@"click on Add button for successful saving of Education details\.")]
         public void ThenClickOnAddButtonForSuccessfulSavingOfEducationDetails_()
         {
             ScenarioContext.Current.Pending();
@@ -424,7 +314,7 @@ namespace Task1.StepDefinations
             ScenarioContext.Current.Pending();
         }
         
-        [Then(@"click on add button for successful saving of Certification details\.")]
+        [Then(@"click on Add button for successful saving of Certification details\.")]
         public void ThenClickOnAddButtonForSuccessfulSavingOfCertificationDetails_()
         {
             ScenarioContext.Current.Pending();

@@ -129,7 +129,7 @@
     <Compile Include="Pages\IWebdriver.cs" />
     <Compile Include="Pages\Languages.cs" />
     <Compile Include="StepDefinations\HomepageWithLogin_TestcasesSteps.cs" />
-    <Compile Include="StepDefinations\InProfileFunctionalityUserWillUpdateAllTheEducationsDetailsLanguageSkillsOtherSkillsCertificationAndDetailsToDescribeAboutAPersonToBuyersToKnowAboutTheUser_Steps.cs" />
+    <Compile Include="StepDefinations\ProfilePage.cs" />
     <Compile Include="Tests\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\SigninPage.cs" />

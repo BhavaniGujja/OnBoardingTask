@@ -1,29 +1,22 @@
 ﻿Feature: Homepage with Login-Testcases
-         In order to login to my account with same credentials 
+         In order, user login to my account with credentials
+         To register new account, user joinin.
 
-@Login Functionality Tests
-Scenario: User attempt to login from home page successfully
-   Given User have open homepage of the respective website
-   And click on Sigin link on the right side of the homepage on the top
-   Then it will be navigated to Signin module
+@Login 
+Scenario: User want to Login with credentials
+   Given User is in home page and want to login
    When user enter the valid credentials with user name and password
    Then user will be successfully Logged into the website
 
-Scenario: User attempt to login from home page was unsuccessfully
-   Given User have open homepage of the respective website
-   And click on Sigin link on the right side of the homepage on the top
-   Then it will be navigated to Signin module
+Scenario: User want to Login with credentails but failure
+   Given User is in home page and want to login
    When user enter the invalid credentials with user name and password
    Then user will be unsuccessfully Logged into the website and appropriate error message will be displayed
 
-
 @Joinin 
-Scenario: To create a account for new user
-   Given New user want to create account in respective website
-   And click on joiin link on the right side of the homepage on the top
-   Then it will be navigated to Joinin module
-   When user enter First name, Last name, email, password and confirm password
-   And click on to agree terms and conditions, click join
+Scenario: User want to create a new account to access website
+   Given User is in home page and  want to create account
+   When click on joiin , user enter First name, Last name, email, password and confirm password
    Then user will be creating a account successfully.
 
   
